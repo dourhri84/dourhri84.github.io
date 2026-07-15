@@ -48,7 +48,7 @@ An earlier student project (SimCassandra) wired a React frontend to a real 6-nod
 
 ### Modules
 
-Cluster Configuration · DDL Analysis · Insertion · Partitioning · Token Ring · Replica Placement · Consistency Level · Gossip · Write Path · Read Path · Update (Upsert) · Delete (Tombstones) · Failure Simulation · Rebalancing & Hot Partitions · Virtual Nodes (Advanced mode only) · Survey/Feedback.
+Cluster Configuration · DDL Analysis · Insertion · Partitioning · Token Ring · Replica Placement · Consistency Level · Gossip · Write Path · Read Path · Update (Upsert) · Delete (Tombstones) · Failure Simulation · Rebalancing & Hot Partitions · Virtual Nodes (Advanced mode only).
 
 ### Beginner vs Advanced mode
 
@@ -64,7 +64,7 @@ The engine layer is pure functions operating on plain domain objects — to add 
 
 ## Survey / Feedback
 
-The Survey module embeds a Google Form (`src/components/modules/Survey.tsx`), collecting satisfaction data from Cassandra practitioners and CS students without CassLab itself needing a backend — responses go straight to the linked Google Sheet.
+"Survey / Feedback" in the navigation is an external link (opens in a new tab) to a Google Form, collecting satisfaction data from Cassandra practitioners and CS students — responses go straight to the linked Google Sheet. It intentionally isn't embedded in-app (an earlier iframe embed gave a poor result); see `SURVEY_URL` in `src/components/layout/NavSidebar.tsx` to change the link.
 
 ## License
 

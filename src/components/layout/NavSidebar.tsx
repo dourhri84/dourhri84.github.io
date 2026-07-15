@@ -6,7 +6,10 @@ interface NavItem {
   path: string;
   label: string;
   advancedOnly?: boolean;
+  external?: boolean;
 }
+
+const SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLScmxUqU3yKadeHS0t0j8jhLeUv4EA1GAnX13SQYx2cmdCV6yg/viewform";
 
 const NAV_ITEMS: NavItem[] = [
   { path: "/", label: "Cluster Configuration" },
@@ -24,7 +27,7 @@ const NAV_ITEMS: NavItem[] = [
   { path: "/failure", label: "Failure Simulation" },
   { path: "/rebalancing", label: "Rebalancing" },
   { path: "/virtual-nodes", label: "Virtual Nodes", advancedOnly: true },
-  { path: "/survey", label: "Survey / Feedback" },
+  { path: SURVEY_URL, label: "Survey / Feedback", external: true },
 ];
 
 export function NavSidebar() {
@@ -47,13 +50,21 @@ export function NavSidebar() {
       </div>
       {!collapsed && (
         <ul>
-          {items.map((item) => (
-            <li key={item.path}>
-              <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} end={item.path === "/"}>
-                {item.label}
-              </NavLink>
-            </li>
-          ))}
+          {items.map((item) =>
+            item.external ? (
+              <li key={item.path}>
+                <a href={item.path} target="_blank" rel="noopener noreferrer">
+                  {item.label} <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ) : (
+              <li key={item.path}>
+                <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} end={item.path === "/"}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ),
+          )}
         </ul>
       )}
     </nav>

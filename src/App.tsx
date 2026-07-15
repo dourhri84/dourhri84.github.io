@@ -15,7 +15,6 @@ import { DeletePage } from "./components/modules/Delete";
 import { FailurePage } from "./components/modules/Failure";
 import { RebalancingPage } from "./components/modules/Rebalancing";
 import { VirtualNodesPage } from "./components/modules/VirtualNodes";
-import { SurveyPage } from "./components/modules/Survey";
 
 export default function App() {
   return (
@@ -37,7 +36,6 @@ export default function App() {
           <Route path="/failure" element={<FailurePage />} />
           <Route path="/rebalancing" element={<RebalancingPage />} />
           <Route path="/virtual-nodes" element={<VirtualNodesPage />} />
-          <Route path="/survey" element={<SurveyPage />} />
         </Route>
       </Routes>
     </HashRouter>
