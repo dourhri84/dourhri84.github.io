@@ -108,8 +108,7 @@ PRIMARY KEY ((pk1, pk2), ck1, ck2, ck3);
 --
 -- ck1, ck2, ck3 -> clustering keys:
 --    * define row ordering inside a partition
---    * support sorting and range searches (<, >, <=, >=)
-          </pre>
+--    * support sorting and range searches (<, >, <=, >=)`}</pre>
         </div>
       }
     />
