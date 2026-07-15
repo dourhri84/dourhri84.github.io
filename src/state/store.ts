@@ -18,9 +18,22 @@ function nextId(prefix: string): string {
   return `${prefix}-${idCounter++}-${Date.now().toString(36)}`;
 }
 
+/** The partition key value, as a string — this is what actually gets
+ * hashed to a token (clustering columns don't affect placement, only
+ * on-disk ordering within a partition). Use for routing/hashing, not
+ * for showing a row to the user: rows sharing a partition key would be
+ * indistinguishable. */
 export function rowKeyString(schema: TableSchema | undefined, row: TableRow): string {
   if (!schema) return row.id;
   return schema.partitionKeyColumns.map((c) => String(row.values[c] ?? "")).join("|") || row.id;
+}
+
+/** Full primary key (partition + clustering columns), for uniquely
+ * labeling a row in the UI — several rows can share a partition key, but
+ * never a full primary key. */
+export function rowDisplayLabel(schema: TableSchema | undefined, row: TableRow): string {
+  if (!schema) return row.id;
+  return schema.primaryKey.map((c) => String(row.values[c] ?? "")).join(" / ") || row.id;
 }
 
 interface CassLabState {
@@ -138,7 +151,7 @@ export const useCassLabStore = create<CassLabState>((set, get) => ({
     const row: TableRow = { id: nextId("row"), tableId, values, writeTimestamp: Date.now() };
     set((s) => ({ rows: [...s.rows, row], activeRowId: row.id, activeTableId: tableId }));
     const schema = get().tables.find((t) => t.id === tableId);
-    get().log(`Inserted row '${rowKeyString(schema, row)}' into '${schema?.name ?? tableId}'.`, "success");
+    get().log(`Inserted row '${rowDisplayLabel(schema, row)}' into '${schema?.name ?? tableId}'.`, "success");
     return row;
   },
   updateRow: (rowId, values) => {
@@ -147,19 +160,19 @@ export const useCassLabStore = create<CassLabState>((set, get) => ({
     }));
     const row = get().rows.find((r) => r.id === rowId);
     const schema = get().tables.find((t) => t.id === row?.tableId);
-    get().log(`Updated row '${row ? rowKeyString(schema, row) : rowId}' (upsert, new timestamp).`, "success");
+    get().log(`Updated row '${row ? rowDisplayLabel(schema, row) : rowId}' (upsert, new timestamp).`, "success");
   },
   deleteRow: (rowId) => {
     set((s) => ({ rows: s.rows.map((r) => (r.id === rowId ? { ...r, tombstonedAt: Date.now() } : r)) }));
     const row = get().rows.find((r) => r.id === rowId);
     const schema = get().tables.find((t) => t.id === row?.tableId);
-    get().log(`Deleted row '${row ? rowKeyString(schema, row) : rowId}' (tombstone written).`, "warning");
+    get().log(`Deleted row '${row ? rowDisplayLabel(schema, row) : rowId}' (tombstone written).`, "warning");
   },
   purgeRow: (rowId) => {
     const row = get().rows.find((r) => r.id === rowId);
     const schema = get().tables.find((t) => t.id === row?.tableId);
     set((s) => ({ rows: s.rows.filter((r) => r.id !== rowId) }));
-    get().log(`Compaction purged tombstoned row '${row ? rowKeyString(schema, row) : rowId}'.`, "info");
+    get().log(`Compaction purged tombstoned row '${row ? rowDisplayLabel(schema, row) : rowId}'.`, "info");
   },
 
   activeTableId: null,

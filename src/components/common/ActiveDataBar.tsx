@@ -1,4 +1,4 @@
-import { useCassLabStore, rowKeyString } from "../../state/store";
+import { useCassLabStore, rowDisplayLabel } from "../../state/store";
 import { useActiveRow } from "../../state/useActiveRow";
 
 export function ActiveDataBar() {
@@ -24,12 +24,12 @@ export function ActiveDataBar() {
           <select value={row.id} onChange={(e) => setActiveRowId(e.target.value)}>
             {rows.map((r) => (
               <option key={r.id} value={r.id}>
-                {rowKeyString(tables.find((t) => t.id === r.tableId), r)}
+                {rowDisplayLabel(tables.find((t) => t.id === r.tableId), r)}
               </option>
             ))}
           </select>
         ) : (
-          <strong>{key}</strong>
+          <strong>{rowDisplayLabel(table, row)}</strong>
         )}
         {table && <span className="hint"> — table {table.name}</span>}
       </div>
