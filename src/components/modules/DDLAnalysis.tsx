@@ -100,8 +100,16 @@ export function DDLAnalysisPage() {
   PRIMARY KEY (pk)
 );
 
--- composite primary key
-PRIMARY KEY ((pk1, pk2), ck1, ck2)`}</pre>
+-- Composite primary key:
+PRIMARY KEY ((pk1, pk2), ck1, ck2, ck3);
+-- (pk1, pk2) -> partition keys:
+--    * hashed together to determine the target node/partition
+--    * used mainly for equality filtering (pk1=... AND pk2=...)
+--
+-- ck1, ck2, ck3 -> clustering keys:
+--    * define row ordering inside a partition
+--    * support sorting and range searches (<, >, <=, >=)
+          </pre>
         </div>
       }
     />
