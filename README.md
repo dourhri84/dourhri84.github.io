@@ -56,7 +56,7 @@ Beginner mode locks the configuration to SimpleStrategy, a single datacenter/rac
 
 ### State & persistence
 
-All simulation state (cluster, tables, rows, event log) lives in a single Zustand store, in memory only — reloading the page resets it, by design (no database, no localStorage for simulation state; only the Survey module persists locally via `localStorage` as a fallback when no external form endpoint is configured).
+All simulation state (cluster, tables, rows, event log) lives in a single Zustand store, in memory only — reloading the page resets it, by design (no database, no localStorage for simulation state).
 
 ### Extending CassLab
 
@@ -64,7 +64,7 @@ The engine layer is pure functions operating on plain domain objects — to add 
 
 ## Survey / Feedback
 
-The in-app Survey module is designed to collect satisfaction data from ~1000 users (Cassandra practitioners and CS students) without requiring CassLab itself to run a backend. Configure `VITE_SURVEY_ENDPOINT` (a `.env` file, e.g. a Formspree endpoint) at build time to have responses POSTed there; responses are always also saved to the visitor's own browser `localStorage` as a fallback/export option.
+The Survey module embeds a Google Form (`src/components/modules/Survey.tsx`), collecting satisfaction data from Cassandra practitioners and CS students without CassLab itself needing a backend — responses go straight to the linked Google Sheet.
 
 ## License
 
