@@ -454,7 +454,7 @@ code,
 .tooltip-term {
   position: relative;
   border-bottom: 1px dotted var(--color-accent);
-  cursor: help;
+  cursor: pointer;
   color: var(--color-accent);
   font-weight: 600;
 }
@@ -466,6 +466,7 @@ code,
   left: 50%;
   transform: translateX(-50%);
   width: 260px;
+  max-width: calc(100vw - 32px);
   background: var(--color-primary);
   color: #fff;
   font-weight: 400;
@@ -478,7 +479,8 @@ code,
 }
 
 .tooltip-term:hover .tooltip-bubble,
-.tooltip-term:focus .tooltip-bubble {
+.tooltip-term:focus .tooltip-bubble,
+.tooltip-term.open .tooltip-bubble {
   display: block;
 }
 

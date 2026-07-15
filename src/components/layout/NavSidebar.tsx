@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useCassLabStore } from "../../state/store";
 
 interface NavItem {
   path: string;
   label: string;
+  advancedOnly?: boolean;
 }
 
 const NAV_ITEMS: NavItem[] = [
@@ -21,13 +23,14 @@ const NAV_ITEMS: NavItem[] = [
   { path: "/delete", label: "Delete" },
   { path: "/failure", label: "Failure Simulation" },
   { path: "/rebalancing", label: "Rebalancing" },
-  { path: "/virtual-nodes", label: "Virtual Nodes" },
-  { path: "/scenarios", label: "Guided Scenarios" },
+  { path: "/virtual-nodes", label: "Virtual Nodes", advancedOnly: true },
   { path: "/survey", label: "Survey / Feedback" },
 ];
 
 export function NavSidebar() {
   const [collapsed, setCollapsed] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
+  const mode = useCassLabStore((s) => s.mode);
+  const items = NAV_ITEMS.filter((item) => !item.advancedOnly || mode === "advanced");
 
   return (
     <nav className={`nav-sidebar ${collapsed ? "collapsed" : ""}`}>
@@ -44,7 +47,7 @@ export function NavSidebar() {
       </div>
       {!collapsed && (
         <ul>
-          {NAV_ITEMS.map((item) => (
+          {items.map((item) => (
             <li key={item.path}>
               <NavLink to={item.path} className={({ isActive }) => (isActive ? "active" : "")} end={item.path === "/"}>
                 {item.label}

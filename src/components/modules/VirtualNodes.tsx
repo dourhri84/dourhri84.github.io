@@ -2,10 +2,11 @@ import { useMemo, useState } from "react";
 import { ModulePage } from "../layout/ModulePage";
 import { TokenRingSvg } from "../common/TokenRingSvg";
 import { useCassLabStore } from "../../state/store";
-import { assignTokens, tokenRanges } from "../../engine/ring";
+import { assignTokens, tokenRanges, ringShareByNode } from "../../engine/ring";
 import { Tooltip } from "../common/Tooltip";
 
 export function VirtualNodesPage() {
+  const mode = useCassLabStore((s) => s.mode);
   const cluster = useCassLabStore((s) => s.cluster);
   const [numVNodes, setNumVNodes] = useState(cluster?.config.numVirtualNodes ?? 16);
 
@@ -21,6 +22,17 @@ export function VirtualNodesPage() {
     return { ...cluster, nodes, config: { ...cluster.config, virtualNodesEnabled: true, numVirtualNodes: numVNodes } };
   }, [cluster, numVNodes]);
 
+  if (mode === "beginner") {
+    return (
+      <ModulePage
+        title="Virtual Nodes"
+        description="Virtual Nodes are an Advanced-mode concept."
+        canvas={<p className="hint">Switch to Advanced mode (top-right) to explore Virtual Nodes.</p>}
+        panel={<p className="hint">Not available in Beginner mode.</p>}
+      />
+    );
+  }
+
   if (!cluster || !classicCluster || !vnodeCluster) {
     return (
       <ModulePage
@@ -34,6 +46,9 @@ export function VirtualNodesPage() {
 
   const classicRanges = tokenRanges(classicCluster.nodes, cluster.config.hashWidth, false);
   const vnodeRanges = tokenRanges(vnodeCluster.nodes, cluster.config.hashWidth, true);
+  const classicShares = ringShareByNode(classicCluster.nodes, cluster.config.hashWidth, false);
+  const vnodeShares = ringShareByNode(vnodeCluster.nodes, cluster.config.hashWidth, true);
+  const totalVNodes = numVNodes * cluster.nodes.length;
 
   return (
     <ModulePage
@@ -49,6 +64,14 @@ export function VirtualNodesPage() {
               — each node owns one contiguous range (the first node's range wraps around the seam, appearing as
               two segments here).
             </p>
+            <ul className="param-list">
+              {classicShares.map((s) => (
+                <li key={s.nodeId}>
+                  <span>{classicCluster.nodes.find((n) => n.id === s.nodeId)?.name}</span>
+                  <strong>{s.percent.toFixed(2)}%</strong>
+                </li>
+              ))}
+            </ul>
           </div>
           <div style={{ flex: 1, minWidth: 280 }}>
             <h4>
@@ -56,8 +79,17 @@ export function VirtualNodesPage() {
             </h4>
             <TokenRingSvg cluster={vnodeCluster} size={300} showVNodes={true} />
             <p className="hint">
-              {vnodeRanges.length} arc segments — {numVNodes} VNodes per node, spread around the ring.
+              {totalVNodes} Virtual Nodes total ({numVNodes} per node × {cluster.nodes.length} node(s)),
+              rendered as {vnodeRanges.length} arc segments.
             </p>
+            <ul className="param-list">
+              {vnodeShares.map((s) => (
+                <li key={s.nodeId}>
+                  <span>{vnodeCluster.nodes.find((n) => n.id === s.nodeId)?.name}</span>
+                  <strong>{s.percent.toFixed(2)}%</strong>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       }

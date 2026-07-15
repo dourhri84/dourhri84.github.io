@@ -31,7 +31,7 @@ export function DDLAnalysisPage() {
           </div>
           <div className="flex-row">
             <button className="btn btn-primary" onClick={handleValidate}>
-              Validate &amp; Create Table
+              Create Table
             </button>
             <button
               className="btn"
@@ -100,7 +100,7 @@ export function DDLAnalysisPage() {
   PRIMARY KEY (pk)
 );
 
--- composite partition key
+-- composite primary key
 PRIMARY KEY ((pk1, pk2), ck1, ck2)`}</pre>
         </div>
       }

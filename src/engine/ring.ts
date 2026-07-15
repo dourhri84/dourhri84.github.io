@@ -139,3 +139,23 @@ export function tokenRanges(
   }
   return ranges;
 }
+
+/** Each node's share of the total ring, as a percentage (sums to ~100). */
+export function ringShareByNode(
+  nodes: ClusterNode[],
+  width: HashWidth,
+  virtualNodesEnabled: boolean,
+): { nodeId: string; percent: number }[] {
+  const { min, max } = tokenBounds(width);
+  const total = max - min + 1n;
+  const ranges = tokenRanges(nodes, width, virtualNodesEnabled);
+  const widthByNode = new Map<string, bigint>();
+  for (const range of ranges) {
+    const span = range.end - range.start + 1n;
+    widthByNode.set(range.nodeId, (widthByNode.get(range.nodeId) ?? 0n) + span);
+  }
+  return nodes.map((node) => ({
+    nodeId: node.id,
+    percent: (Number(widthByNode.get(node.id) ?? 0n) / Number(total)) * 100,
+  }));
+}

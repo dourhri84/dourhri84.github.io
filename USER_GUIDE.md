@@ -31,13 +31,12 @@ From there, every other module reads the same **active data** (shown in the blue
 | **Delete** | Tombstone creation and propagation, `gc_grace_seconds`, and a "simulate compaction" button to permanently purge the row. |
 | **Failure Simulation** | Click nodes (or a whole datacenter) to mark them DOWN and see whether the chosen consistency level still succeeds. |
 | **Rebalancing & Hot Partitions** | Add/remove nodes and watch the ring redistribute; simulate a "hot" partition key to see load concentrate on one node. |
-| **Virtual Nodes** | Side-by-side comparison of classic single-token assignment vs. Virtual Nodes. |
-| **Guided Scenarios** | One-click demonstrations (Hashing, Ring, Replication, QUORUM, Gossip, VNodes, Tombstones, Fault Tolerance) that set everything up for you. |
+| **Virtual Nodes** *(Advanced mode only)* | Side-by-side comparison of classic single-token assignment vs. Virtual Nodes, including each node's share of the ring. |
 | **Survey / Feedback** | A short satisfaction survey — tell us what worked and what didn't. |
 
 ## Tips
 
-- Tooltips (dotted underline) explain every key concept — hover or focus them anywhere in the app.
+- Tooltips (dotted underline) explain every key concept — click (or hover) them anywhere in the app; click again, or elsewhere, to close.
 - The **Event Log** at the bottom records every action you take, across every module.
-- Reloading the page resets the simulation (nothing is stored server-side, by design) — use **Guided Scenarios** for a fast way to get back to a useful starting state.
-- If a module says "select active data first," go to **Insertion** and insert a row (or run a Guided Scenario).
+- Reloading the page resets the simulation (nothing is stored server-side, by design).
+- If a module says "select active data first," go to **Insertion** and insert a row.

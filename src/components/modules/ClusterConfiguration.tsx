@@ -172,10 +172,23 @@ export function ClusterConfigurationPage() {
                 <span>Nodes</span>
                 <strong>{cluster.nodes.length}</strong>
               </li>
-              <li>
-                <span>Virtual Nodes</span>
-                <strong>{cluster.config.virtualNodesEnabled ? cluster.config.numVirtualNodes : "off"}</strong>
-              </li>
+              {cluster.config.virtualNodesEnabled ? (
+                <>
+                  <li>
+                    <span>Virtual Nodes (per node)</span>
+                    <strong>{cluster.config.numVirtualNodes}</strong>
+                  </li>
+                  <li>
+                    <span>Total Virtual Nodes</span>
+                    <strong>{cluster.config.numVirtualNodes * cluster.nodes.length}</strong>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <span>Virtual Nodes</span>
+                  <strong>off</strong>
+                </li>
+              )}
               <li>
                 <span>Hash Width</span>
                 <strong>{cluster.config.hashWidth}-bit</strong>

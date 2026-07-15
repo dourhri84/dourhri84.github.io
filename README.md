@@ -35,7 +35,7 @@ src/
     cqlParser.ts          Hand-written CREATE TABLE parser
     clusterBuilder.ts    Builds a Cluster from a ClusterConfig
   state/              Zustand global store + selector hooks
-  data/               Tooltip glossary + guided-scenario definitions
+  data/               Tooltip glossary
   components/
     layout/             AppShell (4-zone layout), NavSidebar, EventLog, ModulePage
     common/              Reusable pieces: Tooltip, Stepper, TokenRingSvg, OperationFlowDiagram, ActiveDataBar
@@ -48,7 +48,7 @@ An earlier student project (SimCassandra) wired a React frontend to a real 6-nod
 
 ### Modules
 
-Cluster Configuration · DDL Analysis · Insertion · Partitioning · Token Ring · Replica Placement · Consistency Level · Gossip · Write Path · Read Path · Update (Upsert) · Delete (Tombstones) · Failure Simulation · Rebalancing & Hot Partitions · Virtual Nodes · Guided Scenarios · Survey/Feedback.
+Cluster Configuration · DDL Analysis · Insertion · Partitioning · Token Ring · Replica Placement · Consistency Level · Gossip · Write Path · Read Path · Update (Upsert) · Delete (Tombstones) · Failure Simulation · Rebalancing & Hot Partitions · Virtual Nodes (Advanced mode only) · Survey/Feedback.
 
 ### Beginner vs Advanced mode
 
