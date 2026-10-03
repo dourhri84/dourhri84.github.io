@@ -1,0 +1,19 @@
+# CassLab-C1 — M8
+# /etc/cassandra/cassandra.yaml (only the keys to change)
+cluster_name: 'CassLab-C1'
+num_tokens: 1
+initial_token: 9223372036854775807
+endpoint_snitch: GossipingPropertyFileSnitch
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "<IP of M1>,<IP of M2>"
+listen_address: <IP of M8>
+rpc_address: <IP of M8>
+
+# /etc/cassandra/cassandra-rackdc.properties
+dc=dc1
+rack=rack1
+
+# Start M8 only after loading the data and recording the 'before' outputs.
+# auto_bootstrap is true by default: M8 streams the range it takes over.

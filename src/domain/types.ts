@@ -71,14 +71,19 @@ export interface Cluster {
 export type CqlType =
   | "text"
   | "int"
-  | "real"
+  | "bigint"
   | "float"
+  | "double"
+  | "boolean"
   | "date"
-  | "datetime"
+  | "time"
+  | "timestamp"
   | "uuid"
   | "timeuuid"
-  | "time"
-  | "boolean";
+  // Legacy CassLab names (older sessions); the parser maps them to
+  // "double" and "timestamp".
+  | "real"
+  | "datetime";
 
 export interface ColumnDefinition {
   name: string;
@@ -141,6 +146,9 @@ export interface ReplicaPlacement {
   token: bigint;
   primary: ClusterNode;
   replicas: ClusterNode[];
+  /** Configured replication factor per datacenter (SimpleStrategy: one entry). */
+  configuredRf?: Record<string, number>;
+  strategy?: ReplicationStrategy;
 }
 
 export type OperationKind = "write" | "read" | "update" | "delete";

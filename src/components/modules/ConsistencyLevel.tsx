@@ -11,7 +11,7 @@ const LEVELS: ConsistencyLevel[] = ["ONE", "QUORUM", "ALL", "LOCAL_QUORUM", "EAC
 
 export function ConsistencyLevelPage() {
   const { key, hash, cluster } = useActiveRow();
-  const setClusterConfig = useCassLabStore((s) => s.setClusterConfig);
+  const setConsistencyLevel = useCassLabStore((s) => s.setConsistencyLevel);
   const level = cluster?.config.consistencyLevel ?? "ONE";
   const placement = key && hash && cluster ? placeReplicas(key, hash.token, cluster) : undefined;
   const evaluation = placement ? evaluateConsistency(placement, level) : undefined;
@@ -33,7 +33,7 @@ export function ConsistencyLevelPage() {
                   <button
                     key={l}
                     className={`btn ${level === l ? "btn-primary" : ""}`}
-                    onClick={() => setClusterConfig({ consistencyLevel: l })}
+                    onClick={() => setConsistencyLevel(l)}
                   >
                     {l}
                   </button>

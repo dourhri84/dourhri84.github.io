@@ -159,3 +159,27 @@ export function ringShareByNode(
     percent: (Number(widthByNode.get(node.id) ?? 0n) / Number(total)) * 100,
   }));
 }
+
+/**
+ * The token range that contains `token`, i.e. the range (previous ring
+ * point, owning ring point] in Cassandra's notation, with the node that owns
+ * it (the token owner / primary replica). `start` is exclusive, `end` is
+ * inclusive; `wraps` is true for the range that crosses the end of the ring.
+ */
+export function tokenRangeContaining(
+  token: bigint,
+  nodes: ClusterNode[],
+  virtualNodesEnabled: boolean,
+): { nodeId: string; start: bigint; end: bigint; wraps: boolean } | undefined {
+  const pts = ringPoints(nodes, virtualNodesEnabled);
+  if (pts.length === 0) return undefined;
+  const idx = pts.findIndex((p) => p.token >= token);
+  const ownerIdx = idx === -1 ? 0 : idx;
+  const prevIdx = (ownerIdx - 1 + pts.length) % pts.length;
+  return {
+    nodeId: pts[ownerIdx].nodeId,
+    start: pts[prevIdx].token,
+    end: pts[ownerIdx].token,
+    wraps: ownerIdx === 0,
+  };
+}

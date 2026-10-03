@@ -2,7 +2,7 @@
 
 export const TOOLTIPS: Record<string, string> = {
   ONE: "Only one replica must respond for the request to succeed. Fastest, weakest consistency.",
-  QUORUM: "At least a strict majority of replicas must respond: floor(RF / 2) + 1.",
+  QUORUM: "A strict majority of all replicas must respond: floor(RF / 2) + 1, where RF is the sum of the replication factors of all datacenters.",
   ALL: "Every replica must respond. Strongest consistency, but availability suffers if any replica is down.",
   LOCAL_QUORUM: "A strict majority of replicas in the coordinator's local datacenter must respond.",
   EACH_QUORUM: "A strict majority of replicas must respond in every datacenter.",
@@ -15,7 +15,9 @@ export const TOOLTIPS: Record<string, string> = {
   "Replication Factor (RF)": "The number of copies (replicas) of each row that Cassandra keeps, for fault tolerance.",
   SimpleStrategy: "Places replicas by walking the token ring clockwise, with no awareness of datacenters or racks. Suitable for a single datacenter only.",
   NetworkTopologyStrategy: "Places replicas per-datacenter (each DC can have its own replication factor), spreading them across racks to survive rack failures.",
-  Coordinator: "The node that receives a client's request and orchestrates hashing, routing to replicas, and consistency checks. Any node in the cluster can act as coordinator (peer-to-peer, no master).",
+  Coordinator: "The node that receives a client's request and orchestrates hashing, routing to replicas, and consistency checks. Any node in the cluster can act as coordinator (peer-to-peer, no master); the client driver chooses it. The coordinator is not necessarily a replica of the requested partition.",
+  "Token Owner": "The node owning the token range (previous ring point, ring point] that contains a partition's token. It is the primary replica of that partition.",
+  Replica: "A node that stores a copy of a given partition. The replication strategy chooses RF replicas starting from the token owner.",
   "Commit Log": "An append-only, on-disk log that every write is recorded to first, for durability/crash recovery, before the Memtable is updated.",
   Memtable: "An in-memory, sorted structure holding recent writes for a table. Flushed to disk as an SSTable once it grows large enough.",
   SSTable: "An immutable, on-disk, sorted file that Memtables are flushed into. A partition's data can be spread across several SSTables.",

@@ -1,5 +1,5 @@
 import { useCassLabStore, rowKeyString } from "./store";
-import { computeHash } from "../engine/hashing";
+import { computePartitionHash } from "../engine/hashing";
 
 /** Resolves the currently "active" row (shown in the reference UI's
  * ACTIVE DATA bar) plus its owning table and computed hash/token, given the
@@ -15,7 +15,18 @@ export function useActiveRow() {
   const table = row ? tables.find((t) => t.id === row.tableId) : undefined;
   const key = row ? rowKeyString(table, row) : undefined;
   const width = cluster?.config.hashWidth ?? 16;
-  const hash = key ? computeHash(key, width) : undefined;
+  // Hash the *serialized* partition key (type-aware, CompositeType for
+  // multi-column keys), exactly as Cassandra's Murmur3Partitioner does.
+  const components =
+    row && table && table.partitionKeyColumns.length > 0
+      ? table.partitionKeyColumns.map((c) => ({
+          type: table.columns.find((col) => col.name === c)?.type ?? "text",
+          value: row.values[c] ?? null,
+        }))
+      : key !== undefined
+        ? [{ type: "text", value: key }]
+        : [];
+  const hash = key ? computePartitionHash(components, width) : undefined;
 
   return { table, row, key, hash, cluster };
 }

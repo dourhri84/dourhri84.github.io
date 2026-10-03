@@ -1,0 +1,2702 @@
+{
+  "generatedBy": "Cassandra 5.0 reference implementation (apache/cassandra@cassandra-5.0 MurmurHash.java + transcribed placement/consistency code)",
+  "tokenVectors": [
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Computer Science"
+        }
+      ],
+      "cassandraToken": "4991257982149659257"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Artificial Intelligence"
+        }
+      ],
+      "cassandraToken": "-6764524580118466365"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Networks"
+        }
+      ],
+      "cassandraToken": "-2968788222335287015"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "user_42"
+        }
+      ],
+      "cassandraToken": "-413470954984132740"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "a"
+        }
+      ],
+      "cassandraToken": "-8839064797231613815"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "exactly16bytes!!"
+        }
+      ],
+      "cassandraToken": "6148481195207315820"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Génie Informatique"
+        }
+      ],
+      "cassandraToken": "913908629374862149"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Réseaux"
+        }
+      ],
+      "cassandraToken": "-7893778541621149634"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "é"
+        }
+      ],
+      "cassandraToken": "5461403030378599040"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "数据库"
+        }
+      ],
+      "cassandraToken": "-7214031018266706885"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Mathématiques appliquées"
+        }
+      ],
+      "cassandraToken": "-5896556233983357734"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 0
+        }
+      ],
+      "cassandraToken": "-3485513579396041028"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 1
+        }
+      ],
+      "cassandraToken": "-4069959284402364209"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 2
+        }
+      ],
+      "cassandraToken": "-3248873570005575792"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 42
+        }
+      ],
+      "cassandraToken": "-7160136740246525330"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": -1
+        }
+      ],
+      "cassandraToken": "7297452126230313552"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 2147483647
+        }
+      ],
+      "cassandraToken": "-765994672030311617"
+    },
+    {
+      "components": [
+        {
+          "type": "float",
+          "value": 3.5
+        }
+      ],
+      "cassandraToken": "-5859677928905099073"
+    },
+    {
+      "components": [
+        {
+          "type": "real",
+          "value": 2.25
+        }
+      ],
+      "cassandraToken": "6155102802337207502"
+    },
+    {
+      "components": [
+        {
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "cassandraToken": "8849112093580131862"
+    },
+    {
+      "components": [
+        {
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "cassandraToken": "5048724184180415669"
+    },
+    {
+      "components": [
+        {
+          "type": "uuid",
+          "value": "123e4567-e89b-12d3-a456-426614174000"
+        }
+      ],
+      "cassandraToken": "-44119901388393997"
+    },
+    {
+      "components": [
+        {
+          "type": "timeuuid",
+          "value": "50554d6e-29bb-11e5-b345-feff819cdc9f"
+        }
+      ],
+      "cassandraToken": "5656618555219578417"
+    },
+    {
+      "components": [
+        {
+          "type": "date",
+          "value": "2000-04-15"
+        }
+      ],
+      "cassandraToken": "4912190163562040149"
+    },
+    {
+      "components": [
+        {
+          "type": "date",
+          "value": "1969-12-31"
+        }
+      ],
+      "cassandraToken": "-765994672030311617"
+    },
+    {
+      "components": [
+        {
+          "type": "datetime",
+          "value": "2026-05-20T10:30:00"
+        }
+      ],
+      "cassandraToken": "-6999447042768627588"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "Computer Science"
+        },
+        {
+          "type": "int",
+          "value": 2026
+        }
+      ],
+      "cassandraToken": "5575345358497090308"
+    },
+    {
+      "components": [
+        {
+          "type": "text",
+          "value": "dc"
+        },
+        {
+          "type": "text",
+          "value": "rack"
+        }
+      ],
+      "cassandraToken": "1596156600323552195"
+    },
+    {
+      "components": [
+        {
+          "type": "int",
+          "value": 1
+        },
+        {
+          "type": "int",
+          "value": 2
+        }
+      ],
+      "cassandraToken": "4881097376275569167"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Fig.2 cluster: NTS, 2 DCs x 5 nodes, 1 rack, RF=3 per DC, 20 vnodes",
+      "config": {
+        "mode": "advanced",
+        "consistencyLevel": "ONE",
+        "hashWidth": 64,
+        "strategy": "NetworkTopologyStrategy",
+        "replicationFactor": 3,
+        "numDataCenters": 2,
+        "racksPerDataCenter": 1,
+        "nodesPerDataCenter": 5,
+        "virtualNodesEnabled": true,
+        "numVirtualNodes": 20
+      },
+      "nodeTokens": {
+        "node-1": [
+          "-8862219842424819116",
+          "-8705049056041926279",
+          "-6631119094807710828",
+          "-5396022510289137140",
+          "-5016881093533937845",
+          "-4664104841303660999",
+          "-2840269560474423176",
+          "-2467768257644762325",
+          "-750635913523394598",
+          "-454711829260421110",
+          "741227146685616100",
+          "2679253145461468367",
+          "3046568345828150982",
+          "3392355152555858259",
+          "3427325412547894480",
+          "3856339474534194345",
+          "5693249120076292605",
+          "5868333488288865015",
+          "7873161037770591494",
+          "8184867695530636244"
+        ],
+        "node-2": [
+          "-8477213589208144438",
+          "-7793831888009709300",
+          "-7102032464385788114",
+          "-6801448746193076490",
+          "-5650063101089387427",
+          "-5082107126420346632",
+          "-4918738394213609944",
+          "-3293094934126991086",
+          "-2034447436575586644",
+          "-1016635020690003818",
+          "-611838956446605905",
+          "-340692838067673159",
+          "308860430030187611",
+          "3496532766928861417",
+          "3526789257841215270",
+          "6548700278741845604",
+          "6587623277454822514",
+          "7537141739378501832",
+          "8898553360480371082",
+          "8908528896739314139"
+        ],
+        "node-3": [
+          "-8396999455738071864",
+          "-7142171312955698009",
+          "-6277320606845059648",
+          "-4432223473386356841",
+          "-3781651844867863709",
+          "-3733403682717911613",
+          "-3392292272577312160",
+          "-1567435638109237228",
+          "-1252575820897512781",
+          "1825517421559844163",
+          "2761529925587135455",
+          "2868444206981232221",
+          "3877127324811851879",
+          "3910497275456229291",
+          "4055964841462722386",
+          "4467217307472945995",
+          "5697109184689030468",
+          "7351820012015392123",
+          "7481415950633892878",
+          "7763881279392355920"
+        ],
+        "node-4": [
+          "-7907686694483150852",
+          "-6437618154630828306",
+          "-4927852899320251190",
+          "-4683027772179289522",
+          "-4512666854119830075",
+          "-3059627425084882399",
+          "-3008463368234822415",
+          "-1649829306890765322",
+          "-1289948559378603228",
+          "1555005107146834027",
+          "2210625648366648268",
+          "2620139860019260305",
+          "3672435333800527893",
+          "4309470686757798100",
+          "6357011359558450057",
+          "7008881097661553392",
+          "7725504823187080655",
+          "7863789924836110450",
+          "8890108814211474109",
+          "8975271850900332064"
+        ],
+        "node-5": [
+          "-8465621968642261356",
+          "-8264111065542460808",
+          "-8055615142058716742",
+          "-7128127230190059890",
+          "-6281679005060361221",
+          "-4877460706091548170",
+          "-4458864360842586234",
+          "-4263258847650649036",
+          "-3821397051032069541",
+          "-3007584523006145284",
+          "-1665929939972897272",
+          "-452931468878163108",
+          "31506699933305233",
+          "38086776858354951",
+          "181492573509948390",
+          "3920822762978287057",
+          "6946199744199163308",
+          "7332322521065209118",
+          "9104752192499528608",
+          "9218342803987057888"
+        ],
+        "node-6": [
+          "-9106599155309485726",
+          "-7617711867922038927",
+          "-6557773124476133219",
+          "-4894248012632811520",
+          "-4881008409913366241",
+          "-3113183121305583333",
+          "-2948766262076724608",
+          "-2768440444692571538",
+          "-2670057027293248109",
+          "-2511254166745095502",
+          "-2155824774801724063",
+          "-1516601618162450539",
+          "-447403362980756785",
+          "657445144043809653",
+          "1455201696841505088",
+          "4431384714827340451",
+          "4992993153398523877",
+          "6643114160972664361",
+          "6671759647237345767",
+          "7570687290461086518"
+        ],
+        "node-7": [
+          "-8946149936385258084",
+          "-7370870708803125879",
+          "-6656417326266749281",
+          "-6149717431974152754",
+          "-5543728797446607806",
+          "-5046350507351843962",
+          "-1872050303021257350",
+          "986429673885660568",
+          "3634581696524166888",
+          "3993878780761948302",
+          "5131150575513133339",
+          "5401540481158095397",
+          "6292174552315394460",
+          "7370133055213375285",
+          "7438762080733713025",
+          "7689258855028302354",
+          "7798707612590878549",
+          "7920356286147598916",
+          "8030400475931078547",
+          "8746514122144227795"
+        ],
+        "node-8": [
+          "-8868708429614064014",
+          "-8115229358448041142",
+          "-7901737453253056672",
+          "-7231740275251331807",
+          "-7179715673790375517",
+          "-4824996912611678749",
+          "-4377852048080439228",
+          "-4015595363087208111",
+          "-3465914597394714283",
+          "-1670164649802651074",
+          "-1601798340463802316",
+          "-1537176966035978859",
+          "-1119346871870755891",
+          "818318519687075891",
+          "2689509639741003929",
+          "3747321260148224549",
+          "4459109916416834566",
+          "5519945430212867416",
+          "7579930553623329908",
+          "7691430012902998824"
+        ],
+        "node-9": [
+          "-7755578221861038628",
+          "-6806037977688160102",
+          "-6592023559269893407",
+          "-5461385128943253226",
+          "-1643860394544077088",
+          "-1525365004945808391",
+          "-1433003943545085778",
+          "-1173481917936242541",
+          "-63289775607873154",
+          "334074105693460324",
+          "553257289665193319",
+          "610167542279359446",
+          "1098312406896495450",
+          "1779196294860392352",
+          "2133733117513190309",
+          "2515201364568647984",
+          "3678489415613373619",
+          "4084017493618666708",
+          "5251564141139485234",
+          "5792912501435339733"
+        ],
+        "node-10": [
+          "-8876535950205546965",
+          "-8828385285073817548",
+          "-8148675122887465214",
+          "-6413936078289685465",
+          "-5979825806538380902",
+          "-4562664257859163785",
+          "-4324573188989608713",
+          "-1374280052776849702",
+          "-573054863828592413",
+          "2658273215265667779",
+          "2839023783784171774",
+          "2859007708411224889",
+          "3761860150779462101",
+          "4706710074469739799",
+          "5224198084403426898",
+          "5238114998738411262",
+          "6205239377348150444",
+          "6956165736213366634",
+          "7036558051982043638",
+          "8035259208583092531"
+        ]
+      },
+      "placements": [
+        {
+          "key": "Computer Science",
+          "token": "4991257982149659257",
+          "cassandraReplicas": [
+            "node-6",
+            "node-7",
+            "node-10",
+            "node-1",
+            "node-3",
+            "node-4"
+          ]
+        },
+        {
+          "key": "Artificial Intelligence",
+          "token": "-6764524580118466365",
+          "cassandraReplicas": [
+            "node-7",
+            "node-1",
+            "node-9",
+            "node-6",
+            "node-4",
+            "node-5"
+          ]
+        },
+        {
+          "key": "Networks",
+          "token": "-2968788222335287015",
+          "cassandraReplicas": [
+            "node-6",
+            "node-1",
+            "node-2",
+            "node-7",
+            "node-8",
+            "node-5"
+          ]
+        },
+        {
+          "key": "Génie Informatique",
+          "token": "913908629374862149",
+          "cassandraReplicas": [
+            "node-7",
+            "node-9",
+            "node-6",
+            "node-4",
+            "node-3",
+            "node-1"
+          ]
+        },
+        {
+          "key": "user_42",
+          "token": "-413470954984132740",
+          "cassandraReplicas": [
+            "node-2",
+            "node-9",
+            "node-5",
+            "node-6",
+            "node-1",
+            "node-8"
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SimpleStrategy, 5 nodes, single token, RF=3",
+      "config": {
+        "mode": "advanced",
+        "consistencyLevel": "ONE",
+        "hashWidth": 64,
+        "strategy": "SimpleStrategy",
+        "replicationFactor": 3,
+        "numDataCenters": 1,
+        "racksPerDataCenter": 1,
+        "nodesPerDataCenter": 5,
+        "virtualNodesEnabled": false,
+        "numVirtualNodes": 1
+      },
+      "nodeTokens": {
+        "node-1": [
+          "-7378697629483820647"
+        ],
+        "node-2": [
+          "-3689348814741910324"
+        ],
+        "node-3": [
+          "-1"
+        ],
+        "node-4": [
+          "3689348814741910322"
+        ],
+        "node-5": [
+          "7378697629483820645"
+        ]
+      },
+      "placements": [
+        {
+          "key": "Computer Science",
+          "token": "4991257982149659257",
+          "cassandraReplicas": [
+            "node-5",
+            "node-1",
+            "node-2"
+          ]
+        },
+        {
+          "key": "Artificial Intelligence",
+          "token": "-6764524580118466365",
+          "cassandraReplicas": [
+            "node-2",
+            "node-3",
+            "node-4"
+          ]
+        },
+        {
+          "key": "Networks",
+          "token": "-2968788222335287015",
+          "cassandraReplicas": [
+            "node-3",
+            "node-4",
+            "node-5"
+          ]
+        },
+        {
+          "key": "Génie Informatique",
+          "token": "913908629374862149",
+          "cassandraReplicas": [
+            "node-4",
+            "node-5",
+            "node-1"
+          ]
+        },
+        {
+          "key": "user_42",
+          "token": "-413470954984132740",
+          "cassandraReplicas": [
+            "node-3",
+            "node-4",
+            "node-5"
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": false
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "NTS, 2 DCs x 6 nodes, 3 racks, RF=3 per DC, 16 vnodes (rack awareness)",
+      "config": {
+        "mode": "advanced",
+        "consistencyLevel": "ONE",
+        "hashWidth": 64,
+        "strategy": "NetworkTopologyStrategy",
+        "replicationFactor": 3,
+        "numDataCenters": 2,
+        "racksPerDataCenter": 3,
+        "nodesPerDataCenter": 6,
+        "virtualNodesEnabled": true,
+        "numVirtualNodes": 16
+      },
+      "nodeTokens": {
+        "node-1": [
+          "-8705049056041926279",
+          "-6631119094807710828",
+          "-5396022510289137140",
+          "-5016881093533937845",
+          "-4664104841303660999",
+          "-2467768257644762325",
+          "-750635913523394598",
+          "-454711829260421110",
+          "741227146685616100",
+          "2679253145461468367",
+          "3046568345828150982",
+          "3392355152555858259",
+          "5693249120076292605",
+          "5868333488288865015",
+          "7873161037770591494",
+          "8184867695530636244"
+        ],
+        "node-2": [
+          "-7793831888009709300",
+          "-7102032464385788114",
+          "-6801448746193076490",
+          "-5650063101089387427",
+          "-5082107126420346632",
+          "-4918738394213609944",
+          "-3293094934126991086",
+          "-2034447436575586644",
+          "-1016635020690003818",
+          "-340692838067673159",
+          "308860430030187611",
+          "3496532766928861417",
+          "3526789257841215270",
+          "7537141739378501832",
+          "8898553360480371082",
+          "8908528896739314139"
+        ],
+        "node-3": [
+          "-8396999455738071864",
+          "-7142171312955698009",
+          "-6277320606845059648",
+          "-3781651844867863709",
+          "-3733403682717911613",
+          "-3392292272577312160",
+          "-1567435638109237228",
+          "-1252575820897512781",
+          "1825517421559844163",
+          "2761529925587135455",
+          "3877127324811851879",
+          "4467217307472945995",
+          "5697109184689030468",
+          "7351820012015392123",
+          "7481415950633892878",
+          "7763881279392355920"
+        ],
+        "node-4": [
+          "-7907686694483150852",
+          "-6437618154630828306",
+          "-4683027772179289522",
+          "-4512666854119830075",
+          "-3059627425084882399",
+          "-3008463368234822415",
+          "-1649829306890765322",
+          "-1289948559378603228",
+          "2210625648366648268",
+          "4309470686757798100",
+          "6357011359558450057",
+          "7008881097661553392",
+          "7725504823187080655",
+          "7863789924836110450",
+          "8890108814211474109",
+          "8975271850900332064"
+        ],
+        "node-5": [
+          "-8465621968642261356",
+          "-8055615142058716742",
+          "-7128127230190059890",
+          "-6281679005060361221",
+          "-4458864360842586234",
+          "-4263258847650649036",
+          "-3821397051032069541",
+          "-3007584523006145284",
+          "-452931468878163108",
+          "31506699933305233",
+          "38086776858354951",
+          "181492573509948390",
+          "3920822762978287057",
+          "6946199744199163308",
+          "9104752192499528608",
+          "9218342803987057888"
+        ],
+        "node-6": [
+          "-9106599155309485726",
+          "-7617711867922038927",
+          "-6557773124476133219",
+          "-4881008409913366241",
+          "-3113183121305583333",
+          "-2948766262076724608",
+          "-2768440444692571538",
+          "-2670057027293248109",
+          "-2511254166745095502",
+          "-1516601618162450539",
+          "-447403362980756785",
+          "657445144043809653",
+          "1455201696841505088",
+          "4992993153398523877",
+          "6643114160972664361",
+          "7570687290461086518"
+        ],
+        "node-7": [
+          "-8946149936385258084",
+          "-7370870708803125879",
+          "-6656417326266749281",
+          "-6149717431974152754",
+          "-5543728797446607806",
+          "-5046350507351843962",
+          "-1872050303021257350",
+          "986429673885660568",
+          "3634581696524166888",
+          "5131150575513133339",
+          "5401540481158095397",
+          "7370133055213375285",
+          "7689258855028302354",
+          "7798707612590878549",
+          "7920356286147598916",
+          "8746514122144227795"
+        ],
+        "node-8": [
+          "-8868708429614064014",
+          "-8115229358448041142",
+          "-7231740275251331807",
+          "-4824996912611678749",
+          "-4377852048080439228",
+          "-4015595363087208111",
+          "-1601798340463802316",
+          "-1537176966035978859",
+          "-1119346871870755891",
+          "818318519687075891",
+          "2689509639741003929",
+          "3747321260148224549",
+          "4459109916416834566",
+          "5519945430212867416",
+          "7579930553623329908",
+          "7691430012902998824"
+        ],
+        "node-9": [
+          "-7755578221861038628",
+          "-6806037977688160102",
+          "-6592023559269893407",
+          "-5461385128943253226",
+          "-1643860394544077088",
+          "-1525365004945808391",
+          "-1433003943545085778",
+          "-1173481917936242541",
+          "-63289775607873154",
+          "334074105693460324",
+          "553257289665193319",
+          "610167542279359446",
+          "1779196294860392352",
+          "4084017493618666708",
+          "5251564141139485234",
+          "5792912501435339733"
+        ],
+        "node-10": [
+          "-8876535950205546965",
+          "-8828385285073817548",
+          "-8148675122887465214",
+          "-6413936078289685465",
+          "-5979825806538380902",
+          "-4324573188989608713",
+          "-1374280052776849702",
+          "-573054863828592413",
+          "2839023783784171774",
+          "2859007708411224889",
+          "4706710074469739799",
+          "5224198084403426898",
+          "5238114998738411262",
+          "6205239377348150444",
+          "6956165736213366634",
+          "8035259208583092531"
+        ],
+        "node-11": [
+          "-9108520176778571225",
+          "-8505691354618264296",
+          "-8088976375152983096",
+          "-7675826300624643419",
+          "-7192779865678811419",
+          "-6812144408610473522",
+          "-6028996209334532553",
+          "-2937381813423010244",
+          "398051339497435879",
+          "1440594476498019410",
+          "1956214153530957315",
+          "2169817778508072681",
+          "4622123047618910694",
+          "5484799954722042893",
+          "7552508446510135613",
+          "8803753421965669061"
+        ],
+        "node-12": [
+          "-8411427718444674353",
+          "-7905824924690034610",
+          "-7863783482110254295",
+          "-7809450246423036345",
+          "-5402943733099342139",
+          "-4175526320730867331",
+          "-3475785549775518299",
+          "-2535677148283574735",
+          "-2016291235071719424",
+          "1349423595676541490",
+          "3636800322845597027",
+          "5909832485438526567",
+          "6547742598370208969",
+          "6828617205251668855",
+          "8486962701205829941",
+          "8741115563565886226"
+        ]
+      },
+      "placements": [
+        {
+          "key": "Computer Science",
+          "token": "4991257982149659257",
+          "cassandraReplicas": [
+            "node-6",
+            "node-7",
+            "node-9",
+            "node-11",
+            "node-1",
+            "node-5"
+          ]
+        },
+        {
+          "key": "Artificial Intelligence",
+          "token": "-6764524580118466365",
+          "cassandraReplicas": [
+            "node-7",
+            "node-1",
+            "node-9",
+            "node-6",
+            "node-5",
+            "node-11"
+          ]
+        },
+        {
+          "key": "Networks",
+          "token": "-2968788222335287015",
+          "cassandraReplicas": [
+            "node-6",
+            "node-11",
+            "node-12",
+            "node-1",
+            "node-2",
+            "node-7"
+          ]
+        },
+        {
+          "key": "Génie Informatique",
+          "token": "913908629374862149",
+          "cassandraReplicas": [
+            "node-7",
+            "node-12",
+            "node-11",
+            "node-6",
+            "node-4",
+            "node-2"
+          ]
+        },
+        {
+          "key": "user_42",
+          "token": "-413470954984132740",
+          "cassandraReplicas": [
+            "node-2",
+            "node-9",
+            "node-11",
+            "node-6",
+            "node-1",
+            "node-7"
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 4,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 6,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 4,
+              "available": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "NTS, 3 DCs x 4 nodes, 2 racks, RF=3 per DC (RF > racks), single token",
+      "config": {
+        "mode": "advanced",
+        "consistencyLevel": "ONE",
+        "hashWidth": 64,
+        "strategy": "NetworkTopologyStrategy",
+        "replicationFactor": 3,
+        "numDataCenters": 3,
+        "racksPerDataCenter": 2,
+        "nodesPerDataCenter": 4,
+        "virtualNodesEnabled": false,
+        "numVirtualNodes": 1
+      },
+      "nodeTokens": {
+        "node-1": [
+          "-8454757700450211158"
+        ],
+        "node-2": [
+          "-6917529027641081857"
+        ],
+        "node-3": [
+          "-5380300354831952555"
+        ],
+        "node-4": [
+          "-3843071682022823254"
+        ],
+        "node-5": [
+          "-2305843009213693953"
+        ],
+        "node-6": [
+          "-768614336404564652"
+        ],
+        "node-7": [
+          "768614336404564650"
+        ],
+        "node-8": [
+          "2305843009213693951"
+        ],
+        "node-9": [
+          "3843071682022823252"
+        ],
+        "node-10": [
+          "5380300354831952553"
+        ],
+        "node-11": [
+          "6917529027641081855"
+        ],
+        "node-12": [
+          "8454757700450211156"
+        ]
+      },
+      "placements": [
+        {
+          "key": "Computer Science",
+          "token": "4991257982149659257",
+          "cassandraReplicas": [
+            "node-10",
+            "node-11",
+            "node-12",
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-5",
+            "node-6",
+            "node-7"
+          ]
+        },
+        {
+          "key": "Artificial Intelligence",
+          "token": "-6764524580118466365",
+          "cassandraReplicas": [
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-1"
+          ]
+        },
+        {
+          "key": "Networks",
+          "token": "-2968788222335287015",
+          "cassandraReplicas": [
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-1",
+            "node-2",
+            "node-3"
+          ]
+        },
+        {
+          "key": "Génie Informatique",
+          "token": "913908629374862149",
+          "cassandraReplicas": [
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-5",
+            "node-6"
+          ]
+        },
+        {
+          "key": "user_42",
+          "token": "-413470954984132740",
+          "cassandraReplicas": [
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-5"
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": true
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc2 DOWN",
+          "down": [
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "dc1 DOWN",
+          "down": [
+            "node-1",
+            "node-2",
+            "node-3",
+            "node-4"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2",
+            "node-3",
+            "node-4",
+            "node-5",
+            "node-6",
+            "node-7",
+            "node-8",
+            "node-9",
+            "node-10",
+            "node-11",
+            "node-12"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 5,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 9,
+              "available": false
+            },
+            "LOCAL_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 6,
+              "available": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Edge case: SimpleStrategy, 2 nodes, RF=3 (RF > nodes)",
+      "config": {
+        "mode": "advanced",
+        "consistencyLevel": "ONE",
+        "hashWidth": 64,
+        "strategy": "SimpleStrategy",
+        "replicationFactor": 3,
+        "numDataCenters": 1,
+        "racksPerDataCenter": 1,
+        "nodesPerDataCenter": 2,
+        "virtualNodesEnabled": false,
+        "numVirtualNodes": 1
+      },
+      "nodeTokens": {
+        "node-1": [
+          "-4611686018427387905"
+        ],
+        "node-2": [
+          "4611686018427387903"
+        ]
+      },
+      "placements": [
+        {
+          "key": "Computer Science",
+          "token": "4991257982149659257",
+          "cassandraReplicas": [
+            "node-1",
+            "node-2"
+          ]
+        },
+        {
+          "key": "Artificial Intelligence",
+          "token": "-6764524580118466365",
+          "cassandraReplicas": [
+            "node-1",
+            "node-2"
+          ]
+        },
+        {
+          "key": "Networks",
+          "token": "-2968788222335287015",
+          "cassandraReplicas": [
+            "node-2",
+            "node-1"
+          ]
+        },
+        {
+          "key": "Génie Informatique",
+          "token": "913908629374862149",
+          "cassandraReplicas": [
+            "node-2",
+            "node-1"
+          ]
+        },
+        {
+          "key": "user_42",
+          "token": "-413470954984132740",
+          "cassandraReplicas": [
+            "node-2",
+            "node-1"
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "all UP",
+          "down": [],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": true
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": true
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "first node DOWN",
+          "down": [
+            "node-1"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": false
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "first two nodes DOWN",
+          "down": [
+            "node-1",
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": false
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2"
+          ],
+          "key": "Computer Science",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        },
+        {
+          "pattern": "all but one node DOWN",
+          "down": [
+            "node-2"
+          ],
+          "key": "Artificial Intelligence",
+          "expected": {
+            "ONE": {
+              "blockFor": 1,
+              "available": true
+            },
+            "QUORUM": {
+              "blockFor": 2,
+              "available": false
+            },
+            "ALL": {
+              "blockFor": 3,
+              "available": false
+            },
+            "EACH_QUORUM": {
+              "blockFor": 2,
+              "available": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

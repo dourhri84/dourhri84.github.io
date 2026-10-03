@@ -843,3 +843,66 @@ code,
   gap: 10px;
   flex-wrap: wrap;
 }
+
+/* Token ring legend (virtual nodes) */
+.ring-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.ring-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.ring-legend-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Role summary (Partitioning, Failure simulation) */
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.role-table th,
+.role-table td {
+  text-align: left;
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+.role-table th {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  width: 34%;
+}
+.role-table .pending {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+.node-card.replica {
+  border-color: var(--color-accent);
+}
+.node-card.primary {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-info-bg);
+}
+.node-card.coordinator {
+  outline: 2px dashed var(--color-warning);
+  outline-offset: 2px;
+}
+.dc-group {
+  margin-bottom: 14px;
+}
+.dc-group h5 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}

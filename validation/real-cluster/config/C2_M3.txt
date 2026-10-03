@@ -1,0 +1,16 @@
+# CassLab-C2 — M3
+# /etc/cassandra/cassandra.yaml (only the keys to change)
+cluster_name: 'CassLab-C2'
+num_tokens: 16
+initial_token: -8396999455738071864,-7142171312955698009,-6277320606845059648,-3781651844867863709,-3733403682717911613,-3392292272577312160,-1567435638109237228,-1252575820897512781,1825517421559844163,2761529925587135455,3877127324811851879,4467217307472945995,5697109184689030468,7351820012015392123,7481415950633892878,7763881279392355920
+endpoint_snitch: GossipingPropertyFileSnitch
+seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+      - seeds: "<IP of M1>,<IP of M4>"
+listen_address: <IP of M3>
+rpc_address: <IP of M3>
+
+# /etc/cassandra/cassandra-rackdc.properties
+dc=dc1
+rack=rack1

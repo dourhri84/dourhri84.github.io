@@ -17,6 +17,13 @@ function quorumOf(n: number): number {
   return Math.floor(n / 2) + 1;
 }
 
+/**
+ * Mirrors Cassandra's ConsistencyLevel.blockFor() and
+ * ReplicaPlans.assureSufficientLiveReplicas(): the number of required
+ * responses is derived from the *configured* replication factor(s), and the
+ * request is rejected up front (UnavailableException) when fewer live
+ * replicas than required are known to the coordinator.
+ */
 export function evaluateConsistency(
   placement: ReplicaPlacement,
   level: ConsistencyLevel,
@@ -24,14 +31,24 @@ export function evaluateConsistency(
 ): ConsistencyEvaluation {
   const replicas = placement.replicas;
   const available = replicas.filter((n) => n.status === "UP");
-  const dcIds = Array.from(new Set(replicas.map((n) => n.dcId)));
+  const placedDcIds = Array.from(new Set(replicas.map((n) => n.dcId)));
+  // Configured RF per DC; fall back to the placed replicas for placements
+  // built without this information.
+  const rfByDc: Record<string, number> =
+    placement.configuredRf ??
+    Object.fromEntries(placedDcIds.map((dc) => [dc, replicas.filter((n) => n.dcId === dc).length]));
+  const isNts = placement.strategy ? placement.strategy === "NetworkTopologyStrategy" : placedDcIds.length > 1;
+  const totalRf = Object.values(rfByDc).reduce((a, b) => a + b, 0);
+  const dcIds = Object.keys(rfByDc).filter((dc) => rfByDc[dc] > 0);
+
   const perDc = dcIds.map((dcId) => {
     const total = replicas.filter((n) => n.dcId === dcId);
     const avail = available.filter((n) => n.dcId === dcId);
-    const required = quorumOf(total.length);
+    const required = quorumOf(rfByDc[dcId]);
     return { dcId, total: total.length, available: avail.length, required, satisfied: avail.length >= required };
   });
 
+  const localDc = localDcId ?? dcIds[0];
   let requiredResponses: number;
   let satisfied: boolean;
 
@@ -41,23 +58,27 @@ export function evaluateConsistency(
       satisfied = available.length >= 1;
       break;
     case "ALL":
-      requiredResponses = replicas.length;
-      satisfied = available.length >= replicas.length;
+      requiredResponses = totalRf;
+      satisfied = available.length >= totalRf;
       break;
     case "QUORUM":
-      requiredResponses = quorumOf(replicas.length);
+      requiredResponses = quorumOf(totalRf);
       satisfied = available.length >= requiredResponses;
       break;
     case "LOCAL_QUORUM": {
-      const dc = localDcId ?? dcIds[0];
-      const local = perDc.find((d) => d.dcId === dc);
-      requiredResponses = local?.required ?? quorumOf(replicas.length);
-      satisfied = local?.satisfied ?? false;
+      requiredResponses = isNts ? quorumOf(rfByDc[localDc] ?? 0) : quorumOf(totalRf);
+      const localLive = available.filter((n) => n.dcId === localDc).length;
+      satisfied = localLive >= requiredResponses;
       break;
     }
     case "EACH_QUORUM":
-      requiredResponses = perDc.reduce((sum, d) => sum + d.required, 0);
-      satisfied = perDc.every((d) => d.satisfied);
+      if (isNts) {
+        requiredResponses = perDc.reduce((sum, d) => sum + d.required, 0);
+        satisfied = perDc.every((d) => d.satisfied);
+      } else {
+        requiredResponses = quorumOf(totalRf);
+        satisfied = available.length >= requiredResponses;
+      }
       break;
     default:
       requiredResponses = 1;

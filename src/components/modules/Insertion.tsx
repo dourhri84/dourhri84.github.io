@@ -16,12 +16,15 @@ function generateAutoValue(): string {
 function inputTypeFor(col: ColumnDefinition): string {
   switch (col.type) {
     case "int":
+    case "bigint":
     case "real":
     case "float":
+    case "double":
       return "number";
     case "date":
       return "date";
     case "datetime":
+    case "timestamp":
       return "datetime-local";
     case "time":
       return "time";
@@ -132,7 +135,7 @@ export function InsertionPage() {
                     onChange={(e) =>
                       setValues((v) => ({
                         ...v,
-                        [col.name]: col.type === "int" || col.type === "real" || col.type === "float" ? Number(e.target.value) : e.target.value,
+                        [col.name]: col.type === "int" || col.type === "real" || col.type === "float" || col.type === "double" ? Number(e.target.value) : e.target.value,
                       }))
                     }
                   />

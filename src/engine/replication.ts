@@ -46,7 +46,11 @@ function networkTopologyReplicas(
     }
     result.push(...chosen);
   }
-  return result;
+  // Cassandra inserts NTS replicas in the order they are met while walking
+  // the ring clockwise across *all* datacenters, so the first (primary)
+  // replica may belong to any DC. Restore that global clockwise order.
+  const rank = new Map(order.map((n, i) => [n.id, i]));
+  return result.sort((a, b) => (rank.get(a.id) ?? 0) - (rank.get(b.id) ?? 0));
 }
 
 export function placeReplicas(
@@ -60,5 +64,19 @@ export function placeReplicas(
       ? simpleStrategyReplicas(token, cluster.nodes, vnodesEnabled, cluster.config.replicationFactor)
       : networkTopologyReplicas(token, cluster, vnodesEnabled);
   if (replicas.length === 0) return undefined;
-  return { key, token, primary: replicas[0], replicas };
+  // Configured replication factors (per DC). Cassandra derives consistency
+  // requirements from these, not from the number of replicas actually
+  // placed (which is smaller when a DC has fewer nodes than its RF).
+  const configuredRf: Record<string, number> =
+    cluster.config.strategy === "SimpleStrategy"
+      ? { [cluster.dataCenters[0]?.id ?? "dc1"]: cluster.config.replicationFactor }
+      : Object.fromEntries(cluster.dataCenters.map((dc) => [dc.id, dc.replicationFactor]));
+  return {
+    key,
+    token,
+    primary: replicas[0],
+    replicas,
+    configuredRf,
+    strategy: cluster.config.strategy,
+  };
 }

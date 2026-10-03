@@ -18,9 +18,9 @@ From there, every other module reads the same **active data** (shown in the blue
 | Module | What it shows |
 |---|---|
 | **Cluster Configuration** | Build the simulated cluster: strategy, replication factor, consistency level, datacenters/racks, nodes, Virtual Nodes, hash width. |
-| **DDL Analysis** | Validate a `CREATE TABLE` statement; see its Partition Key / Clustering Key / Primary Key breakdown, or a syntax error. |
+| **DDL Analysis** | Validate a `CREATE TABLE` statement; see its Partition Key / Clustering Key / Primary Key breakdown, or a syntax error. The supported CQL subset is listed in the module and in [`docs/CQL_SUBSET.md`](docs/CQL_SUBSET.md). |
 | **Insertion** | Insert rows into a table; triggers the Write Path. |
-| **Partitioning** | Step through hashing a key → computing its token → walking the ring → finding the owning node. |
+| **Partitioning** | Choose the coordinator contacted by the client, then step through hashing the key → computing its token → finding the token range and its owner (primary replica) → placing all replicas → routing the request. The panel keeps the coordinator, the token owner and the replicas apart. |
 | **Token Ring** | The full token space as a circle, with each node's arc(s) and a legend. |
 | **Replica Placement** | Which nodes hold a copy of the active data, under SimpleStrategy or NetworkTopologyStrategy. |
 | **Consistency Level** | Choose ONE / QUORUM / ALL (/ LOCAL_QUORUM / EACH_QUORUM with NetworkTopologyStrategy) and see the required-response math live. |
@@ -29,7 +29,7 @@ From there, every other module reads the same **active data** (shown in the blue
 | **Read Path** | Coordinator → Bloom Filter → Memtable/SSTable → Consistency → Result. |
 | **Update** | Shows that an update is an Upsert: old vs. new value, timestamps, Last-Write-Wins. |
 | **Delete** | Tombstone creation and propagation, `gc_grace_seconds`, and a "simulate compaction" button to permanently purge the row. |
-| **Failure Simulation** | Click nodes (or a whole datacenter) to mark them DOWN and see whether the chosen consistency level still succeeds. |
+| **Failure Simulation** | Mark any physical node (or a whole datacenter) DOWN and follow, step by step, physical nodes → replication factor → replicas of the active partition → available replicas → required responses → consistency level satisfied or `UnavailableException`. |
 | **Rebalancing & Hot Partitions** | Add/remove nodes and watch the ring redistribute; simulate a "hot" partition key to see load concentrate on one node. |
 | **Virtual Nodes** *(Advanced mode only)* | Side-by-side comparison of classic single-token assignment vs. Virtual Nodes, including each node's share of the ring. |
 

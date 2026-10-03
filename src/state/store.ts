@@ -42,6 +42,9 @@ interface CassLabState {
 
   clusterConfig: ClusterConfig;
   setClusterConfig: (partial: Partial<ClusterConfig>) => void;
+  /** Changes the consistency level of the configuration AND of the built
+   * cluster (no rebuild needed: the CL does not affect the topology). */
+  setConsistencyLevel: (level: ConsistencyLevel) => void;
   cluster: Cluster | null;
   buildClusterNow: () => void;
 
@@ -82,6 +85,13 @@ export const useCassLabStore = create<CassLabState>((set, get) => ({
 
   clusterConfig: { ...DEFAULT_CLUSTER_CONFIG },
   setClusterConfig: (partial) => set((s) => ({ clusterConfig: { ...s.clusterConfig, ...partial } })),
+  setConsistencyLevel: (level) => {
+    set((s) => ({
+      clusterConfig: { ...s.clusterConfig, consistencyLevel: level },
+      cluster: s.cluster ? { ...s.cluster, config: { ...s.cluster.config, consistencyLevel: level } } : s.cluster,
+    }));
+    get().log(`Consistency level set to ${level}.`, "info");
+  },
   cluster: null,
   buildClusterNow: () => {
     const cluster = buildCluster(get().clusterConfig);

@@ -12,7 +12,7 @@ This project follows an accompanying functional and technical specification: a c
 ## Features
 
 - **Cluster Configuration** — SimpleStrategy or NetworkTopologyStrategy, tunable replication factor, datacenters, racks, nodes, virtual nodes, and 16/32/64-bit hashing (64-bit uses a real Murmur3 implementation).
-- **DDL Analysis** — a hand-written CQL parser that validates `CREATE TABLE` statements and explicitly separates Partition Key, Clustering Key, and Primary Key.
+- **DDL Analysis** — a hand-written parser for a documented subset of CQL (`CREATE TABLE` only; see [`docs/CQL_SUBSET.md`](docs/CQL_SUBSET.md)) that validates the statement and explicitly separates Partition Key, Clustering Key, and Primary Key.
 - **Full CRUD simulation** — animated Write, Read, Update (upsert), and Delete (tombstone) paths driven by the actual computed token/replica set for the data you enter.
 - **Partitioning & Token Ring** — step-by-step hash → token → ring-lookup → coordinator resolution, with the real Murmur3 byte-level computation shown.
 - **Failure Simulation** — take nodes, racks, or whole datacenters down and see live QUORUM/consistency math.
@@ -76,6 +76,17 @@ All simulation state (cluster, tables, rows, event log) lives in a single Zustan
 ### Extending CassLab
 
 The engine layer is pure functions operating on plain domain objects — to add a new mechanism, add a function to `engine/`, wire it into the Zustand store if it needs shared state, and build a module component under `components/modules/` using the existing `ModulePage`, `Stepper`, `TokenRingSvg` and `OperationFlowDiagram` building blocks for visual consistency.
+
+## Technical validation
+
+The simulation engine is checked against a reference implementation built from the Apache Cassandra 5.0 source code: Cassandra's own `MurmurHash.java` plus its replica-placement and consistency logic. The checks cover token computation, token ownership, SimpleStrategy and NetworkTopologyStrategy replica placement, primary replica / coordinator, consistency levels under node and DC failures, and bootstrap/decommission.
+
+```bash
+npm test                 # 311 unit tests with golden vectors from the reference implementation
+./validation/run.sh      # full differential run (10,022 keys, 800 clusters, 168,074 test cases)
+```
+
+See [`validation/README.md`](validation/README.md) for the method, the results and the scope.
 
 ## Survey / Feedback
 
