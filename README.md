@@ -99,11 +99,11 @@ See [`validation/README.md`](validation/README.md) for the method, the results a
 
 ## Citing this software
 
-If you use CassLab in research or teaching, please cite the accompanying SoftwareX article (citation details to be added once published) and/or this repository directly, e.g.:
+Accompanying SoftwareX article (citation details to be added once published) and/or this repository directly, e.g.:
 
 ```
-[Author name(s)]. CassLab: an in-browser simulator for teaching Apache Cassandra's
-internal mechanisms [Computer software]. https://github.com/dourhri84/dourhri84.github.io
+[Dourhri Ahmed et Al.]. CassLab: An Interactive Simulator for Learning
+Apache Cassandra Distributed Mechanisms. https://github.com/dourhri84/dourhri84.github.io
 ```
 
 ## License
