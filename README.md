@@ -99,7 +99,7 @@ See [`validation/README.md`](validation/README.md) for the method, the results a
 
 ## Citing this software
 
-Accompanying SoftwareX article (citation details to be added once published) and/or this repository directly, e.g.:
+Accompanying SoftwareX article (citation details to be added soon).
 
 ```
 [Dourhri Ahmed et Al.]. CassLab: An Interactive Simulator for Learning
